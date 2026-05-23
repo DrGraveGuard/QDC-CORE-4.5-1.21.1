@@ -57,7 +57,9 @@ public class MainMenuItem {
 	        Object screenInstance = constructor.newInstance();
 
 	        if (screenInstance instanceof Screen screen) {
-	            Minecraft.getInstance().setScreen(screen);
+	        	Minecraft.getInstance().execute(() -> {
+	        	    Minecraft.getInstance().setScreen(screen);
+	        	});
 	        }
 	    } catch (Exception e) {
 

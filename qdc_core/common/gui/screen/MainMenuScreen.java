@@ -95,6 +95,9 @@ public class MainMenuScreen extends Screen {
 	private GuiButton btnEnchanter = new GuiButton(new MainMenuItem("QDC Quantum Enchanter",
 			"com.qdc_mod.qdc_quantum_enchanter.quantum_enchanter.common.gui.screen.QuantumEnchanterScreen", "qdc_quantum_enchanter"));
 	
+	private GuiButton btnPotionOverload = new GuiButton(new MainMenuItem("QDC Quantum Potion Overload",
+			"com.qdc_mod.qdc_quantum_potion_overload.quantum_potion_overload.common.gui.screen.PotionOverloadScreen", "qdc_quantum_potion_overload"));
+	
 	private List<GuiButton> initRawMainMenuButtons() {
 		List<GuiButton> res = new ArrayList<MainMenuScreen.GuiButton>();
 
@@ -102,6 +105,7 @@ public class MainMenuScreen extends Screen {
 		res.add(btnSettings);
 		res.add(btnSacrifice);
 		res.add(btnEnchanter);
+		res.add(btnPotionOverload);
 
 		return res;
 	}

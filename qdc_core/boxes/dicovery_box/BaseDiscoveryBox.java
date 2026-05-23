@@ -16,6 +16,11 @@ public class BaseDiscoveryBox {
 	public static List<String> baseItemList = new ArrayList<String>();
 
 	
+	public static void clear()
+	{
+		baseItemList = new ArrayList<String>();
+	}
+	
 	
 	public static void addNewDiscoveredItem(String itemID) {
 		

@@ -40,6 +40,14 @@ public class MainBox {
 		ConfigFileBox.clear();
 		LootBox.clear();
 		SusStewFunctions.clear();
+		BaseDiscoveryBox.clear();
+		
+		Qdc.AssemblerVariables.clear();
+		Qdc.SettingsScreenVariables.clear();
+		Qdc.DisassemblerVariables.clear();
+		
+		Qdc.curPlayer = null;
+		Qdc.serverLevel = null;
 	}
 
 	public static void loadModData(Player curPlayer) {
