@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+    "textures": {
+    	"layer0": "qdc_core_4_5:item/machine_cores/core_gold"   
+    }
+}

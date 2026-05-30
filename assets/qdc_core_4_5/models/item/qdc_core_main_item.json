@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+   "layer0": "qdc_core_4_5:item/qdc_core/qdc_core_main_item"   
+  }
+}

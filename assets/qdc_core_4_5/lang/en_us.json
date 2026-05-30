@@ -1,0 +1,30 @@
+{
+	"creativetab.qdc_core_4_5.qdc_core_creative_tab": "QDC CORE 4.5",
+	
+	"item.qdc_core_4_5.qdc_core_main_item": "QDC Main Item",
+		
+	"item.qdc_core_4_5.particles_nature": "Nature Particles",
+	"item.qdc_core_4_5.particles_food": "Food Particles",
+	"item.qdc_core_4_5.particles_metal": "Metal Particles",
+	"item.qdc_core_4_5.particles_gem": "Gem Particles",
+	"item.qdc_core_4_5.particles_enchanted": "Enchanted Particles",
+	"item.qdc_core_4_5.particles_potion": "Potion Particles",
+
+	
+	"item.qdc_core_4_5.particle_fragment_nature": "Nature Particle Fragment",
+	"item.qdc_core_4_5.particle_fragment_food": "Food Particle Fragment",
+	"item.qdc_core_4_5.particle_fragment_metal": "Metal Particle Fragment",
+	"item.qdc_core_4_5.particle_fragment_gem": "Gem Particle Fragment",
+	"item.qdc_core_4_5.particle_fragment_enchanted": "Enchanted Particle Fragment",
+	"item.qdc_core_4_5.particle_fragment_potion": "Potion Particle Fragment",
+	
+	"item.qdc_core_4_5.qdc_core_quantum_core_wood": "Wood Quantum Core",
+	"item.qdc_core_4_5.qdc_core_quantum_core_stone": "Stone Quantum Core",
+	"item.qdc_core_4_5.qdc_core_quantum_core_iron": "Iron Quantum Core",
+	"item.qdc_core_4_5.qdc_core_quantum_core_gold": "Gold Quantum Core",
+	"item.qdc_core_4_5.qdc_core_quantum_core_diamond": "Diamond Quantum Core",
+	"item.qdc_core_4_5.qdc_core_quantum_core_emerald": "Emerald Quantum Core",
+	"item.qdc_core_4_5.qdc_core_quantum_core_netherite": "Netherite Quantum Core",
+	"item.qdc_core_4_5.qdc_machine_screen": "Machine Screen"
+
+}
