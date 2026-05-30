@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "qdc_core_4_5:qdc_core_quantum_core_stone"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "group": "Machine Cores",
+  "result": {
+    "id": "qdc_core_4_5:qdc_core_quantum_core_iron"
+  }
+}

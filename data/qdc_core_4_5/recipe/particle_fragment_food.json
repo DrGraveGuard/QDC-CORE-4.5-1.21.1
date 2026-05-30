@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "qdc_core_4_5:particles_food"
+    }
+  ],
+  "group": "Particle Fragments",
+  "result": {
+    "id": "qdc_core_4_5:particle_fragment_food",
+    "count": 20
+  }
+}

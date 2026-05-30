@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#L#",
+    "#Q#"
+  ],
+  "key": {
+    "#": {
+      "item": "qdc_core_4_5:particle_fragment_nature"
+    },
+    "L": {
+      "tag": "minecraft:logs"
+    },
+    "Q": {
+      "item": "qdc_core_4_5:particles_nature"
+    }
+  },
+  "group": "Machine Cores",
+  "result": {
+    "id": "qdc_core_4_5:qdc_core_quantum_core_wood"
+  }
+}

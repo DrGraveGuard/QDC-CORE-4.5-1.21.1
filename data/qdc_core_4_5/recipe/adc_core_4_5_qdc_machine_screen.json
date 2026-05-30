@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#C#",
+    "CGC",
+    "#C#"
+  ],
+  "key": {
+    "#": {
+      "item": "qdc_core_4_5:particle_fragment_nature"
+    },
+    "C": {
+      "tag": "minecraft:coals"
+    },
+    "G": {
+      "item": "minecraft:glass_pane"
+    }
+  },
+  "group": "Machine Screens",
+  "result": {
+    "id": "qdc_core_4_5:qdc_machine_screen"
+  }
+}
