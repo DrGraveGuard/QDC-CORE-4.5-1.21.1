@@ -329,6 +329,7 @@ public class ParticleAssignmentFunctions {
 		if (rec.makeAmount > 1)
 			recParticles.divide(rec.makeAmount);
 
+		if(shouldAddCraftingExtraParticles(resultItem.itemStack))
 		if (Qdc.ParticleConstants.EXTRATRA_CRAFTING_PARTICLE_PERCENTAGE > 0) {
 			ParticleCollection extraCraftingParticles = new ParticleCollection();
 
@@ -342,4 +343,19 @@ public class ParticleAssignmentFunctions {
 		return recParticles;
 	}
 
+	private static String[] modIdIgnoreExtraParticlesList = new String[] {Qdc.MOD_ID, "qdc_quantum_farming_2"};
+	
+	private static boolean shouldAddCraftingExtraParticles(ItemStack craftedItem)
+	{
+		String itemModID = GlobalFuncs.getItemModID(craftedItem.getItem());
+		
+		for(String s : modIdIgnoreExtraParticlesList)
+		{
+			if(s.equals(itemModID))
+				return false;
+		}
+			
+		return true;
+	}
+	
 }

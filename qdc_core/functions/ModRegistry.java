@@ -1,6 +1,7 @@
 package com.qdc_mod.qdc_core_4_5.qdc_core.functions;
 
 import com.qdc_mod.qdc_core_4_5.qdc_core.core.init.AttachmentInit;
+import com.qdc_mod.qdc_core_4_5.qdc_core.core.init.CreativeTabInit;
 import com.qdc_mod.qdc_core_4_5.qdc_core.core.init.ItemInit;
 import com.qdc_mod.qdc_core_4_5.qdc_core.core.init.MenuInit;
 
@@ -18,7 +19,7 @@ public class ModRegistry {
 	}
 
 	public static void registerCreativeTabs(IEventBus eventBus) {
-//		CreativeTabInit.register(eventBus);
+		CreativeTabInit.register(eventBus);
 	}
 
 	public static void registerMenus(IEventBus eventBus) {

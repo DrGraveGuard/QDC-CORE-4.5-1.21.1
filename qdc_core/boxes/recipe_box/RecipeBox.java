@@ -45,6 +45,11 @@ public class RecipeBox {
 	}
 
 	
+	public static void addMainParticleItems()
+	{
+		
+	}
+	
 	
 	public static List<DiscoveredEnchantmentDataItem> getAllDiscoveredEnchantments()
 	{

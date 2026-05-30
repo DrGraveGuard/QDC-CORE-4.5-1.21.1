@@ -5,6 +5,7 @@ import java.awt.Point;
 import com.qdc_mod.qdc_core_4_5.api.GlobalFuncs;
 import com.qdc_mod.qdc_core_4_5.api.GuiFunctions;
 import com.qdc_mod.qdc_core_4_5.api.ParticleCollection;
+import com.qdc_mod.qdc_core_4_5.api.QdcApi;
 import com.qdc_mod.qdc_core_4_5.qdc_core.boxes.particle_box.functions.ParticleFunctions;
 import com.qdc_mod.qdc_core_4_5.qdc_core.boxes.recipe_box.functions.PotionInitFunctions;
 import com.qdc_mod.qdc_core_4_5.qdc_core.common.gui.settings.AssemblerSettings.INFO_WINDOW;
@@ -93,7 +94,23 @@ public class DisassemblerInventoryItem {
 		}
 		
 		if (stack.has(DataComponents.CONTAINER)) {
-			if (vanillaContainerHasItems()) {
+			
+			if(GlobalFuncs.isQuantumSeed(is))
+			{
+				ItemContainerContents contents = stack.get(DataComponents.CONTAINER);
+		        if (contents != null) {
+		        	
+		        	itemName = stack.getDisplayName().getString();
+		        	id+=itemName;
+		        	particles =  QdcApi.QDC_CORE.FUNCTIONS.getItemParticles(contents.getStackInSlot(0));
+		        	canBeDisassembled = true;
+		        	setDisplayName();
+		        	return;
+		        }
+				
+				
+			}	
+			else if (vanillaContainerHasItems()) {
 				canBeDisassembled = false;
 				id += "_vanilla_contianer_not_empty";
 				return;

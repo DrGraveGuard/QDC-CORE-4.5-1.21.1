@@ -18,6 +18,7 @@ import com.qdc_mod.qdc_core_4_5.qdc_core.boxes.recipe_box.functions.EnchantmentI
 import com.qdc_mod.qdc_core_4_5.qdc_core.boxes.recipe_box.functions.ItemRecipeFuctions;
 import com.qdc_mod.qdc_core_4_5.qdc_core.boxes.recipe_box.functions.PotionInitFunctions;
 import com.qdc_mod.qdc_core_4_5.qdc_core.boxes.recipe_box.functions.SusStewFunctions;
+import com.qdc_mod.qdc_core_4_5.qdc_core.functions.ParticleRegistrationFunction;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.player.Player;
@@ -46,8 +47,8 @@ public class MainBox {
 		Qdc.SettingsScreenVariables.clear();
 		Qdc.DisassemblerVariables.clear();
 		
-		Qdc.curPlayer = null;
-		Qdc.serverLevel = null;
+		Qdc.isFinishedSettingParticles = false;
+		Qdc.isFinishedLoadingData = false;
 	}
 
 	public static void loadModData(Player curPlayer) {
@@ -55,7 +56,7 @@ public class MainBox {
 		BaseDiscoveryBox.loadData(curPlayer);
 		
 		Qdc.isFinishedLoadingData = true;
-
+		
 	}
 
 	public static void processItems(ServerLevel serverLevel) {
@@ -64,6 +65,7 @@ public class MainBox {
 		EnchantmentInitFunctions.setupEchantmentItems(serverLevel);
 		PotionInitFunctions.registerPotions(serverLevel);
 		SusStewFunctions.registerSusStews();
+		ParticleRegistrationFunction.registerMainParticleItems();
 		RecipeBox.generateOrderedItemList();
 		RecipeBox.fillEnchantmentList();
 
@@ -77,7 +79,11 @@ public class MainBox {
 		
 		
 		Qdc.isFinishedSettingParticles = true;
+		
+		
 	}
 
 
+
+	
 }

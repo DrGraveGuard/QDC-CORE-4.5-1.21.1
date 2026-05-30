@@ -42,7 +42,13 @@ public class ItemRecipeFuctions {
 			Items.INFESTED_CHISELED_STONE_BRICKS, Items.INFESTED_COBBLESTONE, Items.INFESTED_CRACKED_STONE_BRICKS,
 			Items.INFESTED_DEEPSLATE, Items.INFESTED_MOSSY_STONE_BRICKS, Items.INFESTED_STONE,
 			Items.INFESTED_STONE_BRICKS, Items.SPAWNER, Items.TRIAL_SPAWNER, Items.VAULT, Items.DEBUG_STICK,
-			Items.KNOWLEDGE_BOOK, Items.WRITTEN_BOOK, Items.ENCHANTED_BOOK, Items.FILLED_MAP, Items.SUSPICIOUS_STEW };
+			Items.KNOWLEDGE_BOOK, Items.WRITTEN_BOOK, Items.ENCHANTED_BOOK, Items.FILLED_MAP, Items.SUSPICIOUS_STEW ,
+			QdcApi.QDC_CORE.ITEMS.PARTICLE_ITEM.NATURE,
+			QdcApi.QDC_CORE.ITEMS.PARTICLE_ITEM.FOOD,
+			QdcApi.QDC_CORE.ITEMS.PARTICLE_ITEM.METAL,
+			QdcApi.QDC_CORE.ITEMS.PARTICLE_ITEM.GEM,
+			QdcApi.QDC_CORE.ITEMS.PARTICLE_ITEM.ENCHANTED,
+			QdcApi.QDC_CORE.ITEMS.PARTICLE_ITEM.POTION};
 
 	public static Item[] dyeArray = new Item[] { Items.BLACK_DYE, Items.BLUE_DYE, Items.BROWN_DYE, Items.CYAN_DYE,
 			Items.GRAY_DYE, Items.GREEN_DYE, Items.LIGHT_BLUE_DYE, Items.LIGHT_GRAY_DYE, Items.LIME_DYE,
@@ -361,7 +367,8 @@ public class ItemRecipeFuctions {
 
 		for (ItemStack is : allItemStacks) {
 
-			if (is.getItem() != Items.AIR)
+			if (is.getItem() != Items.AIR && !GlobalFuncs.isQuantumSeed(is))
+			{
 				if (isOre(is)) {
 					if (!isInIngredientList(is.getItem()))
 						addToIngredientList(is.getItem());
@@ -396,6 +403,7 @@ public class ItemRecipeFuctions {
 					}
 
 				}
+			}
 		}
 	}
 

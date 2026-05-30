@@ -732,22 +732,6 @@ public class DefaultParticlesBox {
 		defaultItems.add(new DefaultItemParticles().addPartialName("scute")
 				.setDefaultParticles(new ParticleCollection().addNatureParticles(10)));
 
-		// ============================================
-		// PARTICLES
-		// -------------------------------------------
-
-		defaultItems.add(new DefaultItemParticles(QdcApi.QDC_CORE.ITEMS.PARTICLE_ITEM.NATURE,
-				new ParticleCollection().addNatureParticles(10)));
-		defaultItems.add(new DefaultItemParticles(QdcApi.QDC_CORE.ITEMS.PARTICLE_ITEM.FOOD,
-				new ParticleCollection().addFoodParticles(1)));
-		defaultItems.add(new DefaultItemParticles(QdcApi.QDC_CORE.ITEMS.PARTICLE_ITEM.METAL,
-				new ParticleCollection().addMetalParticles(1)));
-		defaultItems.add(new DefaultItemParticles(QdcApi.QDC_CORE.ITEMS.PARTICLE_ITEM.GEM,
-				new ParticleCollection().addGemParticles(1)));
-		defaultItems.add(new DefaultItemParticles(QdcApi.QDC_CORE.ITEMS.PARTICLE_ITEM.ENCHANTED,
-				new ParticleCollection().addEnchantedParticles(1)));
-		defaultItems.add(new DefaultItemParticles(QdcApi.QDC_CORE.ITEMS.PARTICLE_ITEM.POTION,
-				new ParticleCollection().addPotionParticles(1)));
 
 		populateItems();
 

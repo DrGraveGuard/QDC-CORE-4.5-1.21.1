@@ -29,6 +29,27 @@ public class ParticleIconFunctions {
 		
 	}
 	
+
+	public static Item getParticleFragmenyIconItem(ParticleType type) {
+		
+		switch(type)
+		{
+		
+		
+		case NATURE: return QdcApi.QDC_CORE.ITEMS.PARTICLE_FRAGMENT_ITEM.NATURE;
+		case FOOD: return QdcApi.QDC_CORE.ITEMS.PARTICLE_FRAGMENT_ITEM.FOOD;
+		case METAL: return QdcApi.QDC_CORE.ITEMS.PARTICLE_FRAGMENT_ITEM.METAL;
+		case GEM: return QdcApi.QDC_CORE.ITEMS.PARTICLE_FRAGMENT_ITEM.GEM;
+		case ENCHANTED: return QdcApi.QDC_CORE.ITEMS.PARTICLE_FRAGMENT_ITEM.ENCHANTED;
+		case POTION: return QdcApi.QDC_CORE.ITEMS.PARTICLE_FRAGMENT_ITEM.POTION;
+			
+		default:
+			return null;
+		
+		}
+		
+	}
+	
 	public static final Color amountColor = Color.white;
 	public static final Color natureColor = Color.green;
 	public static final Color foodColor = Color.orange;
@@ -53,5 +74,6 @@ public class ParticleIconFunctions {
 		
 		}
 	}
+
 	
 }

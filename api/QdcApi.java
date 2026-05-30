@@ -16,6 +16,7 @@ import com.qdc_mod.qdc_core_4_5.qdc_core.common.gui.functions.AssemblerFunctions
 import com.qdc_mod.qdc_core_4_5.qdc_core.common.gui.functions.DisassemblerFunctions;
 import com.qdc_mod.qdc_core_4_5.qdc_core.common.gui.screen.MainMenuScreen;
 import com.qdc_mod.qdc_core_4_5.qdc_core.core.init.ItemInit;
+import com.qdc_mod.qdc_core_4_5.qdc_core.functions.ItemFunctions;
 import com.qdc_mod.qdc_core_4_5.qdc_core.functions.ParticleIconFunctions;
 
 import net.minecraft.client.Minecraft;
@@ -27,29 +28,18 @@ public class QdcApi {
 
 	public class QDC_CORE {
 
-		public class ENUMS
-		{
+		public class ENUMS {
 			public static enum TextureColor {
-				GRAY_1,GRAY_2,
-				WHITE_1, WHITE_2,
-				BLACK_1, BLACK_2,
-				BLUE_1, BLUE_2,
-				GREEN_1, GREEN_2,
-				RED_1, RED_2,
-				YELLOW_1, YELLOW_2,
-				PURPLE_1, PURPLE_2,
-				ORANGE_1, ORANGE_2
+				GRAY_1, GRAY_2, WHITE_1, WHITE_2, BLACK_1, BLACK_2, BLUE_1, BLUE_2, GREEN_1, GREEN_2, RED_1, RED_2,
+				YELLOW_1, YELLOW_2, PURPLE_1, PURPLE_2, ORANGE_1, ORANGE_2
 			}
-			
-			public static enum TtleType
-			{
+
+			public static enum TtleType {
 				MAIN_TITLE, SUB_TITLE,
 			}
-			
+
 		}
-		
-		
-		
+
 		public class ITEMS {
 
 			public class PARTICLE_ITEM {
@@ -61,59 +51,83 @@ public class QdcApi {
 				public static final Item POTION = ItemInit.PARTICLES_POTION.get();
 			}
 
+			public class PARTICLE_FRAGMENT_ITEM {
+				public static final Item NATURE = ItemInit.PARTICLE_FRAGMENT_NATURE.get();
+				public static final Item FOOD = ItemInit.PARTICLE_FRAGMENT_FOOD.get();
+				public static final Item METAL = ItemInit.PARTICLE_FRAGMENT_METAL.get();
+				public static final Item GEM = ItemInit.PARTICLE_FRAGMENT_GEM.get();
+				public static final Item ENCHANTED = ItemInit.PARTICLE_FRAGMENT_ENCHANTED.get();
+				public static final Item POTION = ItemInit.PARTICLE_FRAGMENT_POTION.get();
+			}
+
+			public class MACHINE_CORES {
+
+				public static final Item WOOD = ItemInit.QUANTUM_CORE_WOOD.get();
+				public static final Item STONE = ItemInit.QUANTUM_CORE_STONE.get();
+				public static final Item IRON = ItemInit.QUANTUM_CORE_IRON.get();
+				public static final Item GOLD = ItemInit.QUANTUM_CORE_GOLD.get();
+				public static final Item DIAMOND = ItemInit.QUANTUM_CORE_DIAMOND.get();
+				public static final Item EMERALD = ItemInit.QUANTUM_CORE_EMERALD.get();
+				public static final Item NETHERITE = ItemInit.QUANTUM_CORE_NETHERITE.get();
+			}
+
+			public class MACHINE_ITEMS {
+
+				public static final Item MACHINE_SCREEN = ItemInit.QUANTUM_MACHINE_SCREEN.get();
+			}
+
 			public static final Item QDC_MAIN_ITEM = ItemInit.QDC_MAIN_ITEM.get();
 
 		}
-		
-	
 
 		public class FUNCTIONS {
-			
-			public static void showMainMenuScreen()
-			{
+
+			public static List<ItemStack> getAllDiscoveredToolsAndWeapons() {
+				return ItemFunctions.getDiscoveredToolsAndWeps();
+			}
+
+			public static void showMainMenuScreen() {
 				Minecraft.getInstance().setScreen(new MainMenuScreen());
 			}
-			
-			public static double getBaseEnchantmentParticleValue()
-			{
+
+			public static double getBaseEnchantmentParticleValue() {
 				return Qdc.ParticleConstants.ENCHANMENT_LEVEL_PARTICLES;
 			}
-			
-			
-			public static List<DiscoveredEnchantmentDataItem> getAllDiscoveredEnchantments()
-			{
+
+			public static List<DiscoveredEnchantmentDataItem> getAllDiscoveredEnchantments() {
 				return RecipeBox.getAllDiscoveredEnchantments();
 			}
-			
+
 			public static List<ItemStack> getDiscoveredPotionsByVialType(Item vialType) {
 				return PotionSearchFunctions.getDiscoveredPotionsByVialType(vialType);
 			}
-			
-			
-			public static int disassembleItems(ItemStack stack, int count)
-			{
+
+			public static int disassembleItems(ItemStack stack, int count) {
 				return DisassemblerFunctions.disassembleItemForApi(stack, count);
 			}
-			
-			public static int assembleItems(ItemStack stack, int count)
-			{
+
+			public static int assembleItems(ItemStack stack, int count) {
 				return AssemblerFunctions.assembleItemForApi(stack, count);
 			}
-			
-			public static  double getParticlesDouble(ParticleType particleType) {
+
+			public static double getParticlesDouble(ParticleType particleType) {
 				return ParticleStorage.getParticlesDouble(particleType);
 			}
-			
-			public static  BigDecimal getParticlesBigDecimal(ParticleType particleType) {
-				
+
+			public static BigDecimal getParticlesBigDecimal(ParticleType particleType) {
+
 				return ParticleStorage.getParticlesBigDecimal(particleType);
 
 			}
-			
 
 			public static Item getParticleIconItem(ParticleType type) {
 
 				return ParticleIconFunctions.getParticleIconItem(type);
+			}
+
+			public static Item getParticleFragmenyIconItem(ParticleType type) {
+
+				return ParticleIconFunctions.getParticleFragmenyIconItem(type);
 			}
 
 			public static Color getParticleTextColor(ParticleType type) {
@@ -124,15 +138,13 @@ public class QdcApi {
 
 				return ParticleFunctions.itemHasParticles(stack);
 			}
-			
-
 
 			public static void addParticles(ParticleCollection particles) {
 
 				ParticleStorage.addParticleCollection(particles);
 
 			}
-			
+
 			public static boolean removeParticleCollection(ParticleCollection toRemove) {
 				return ParticleStorage.removeParticleCollection(toRemove);
 			}
@@ -149,14 +161,13 @@ public class QdcApi {
 
 				return ParticleStorage.getParticlesString(type);
 			}
-			
+
 			public static int countCanMakeAmount(ParticleCollection itemParticles) {
-				
+
 				return ParticleStorage.countCanMakeAmount(itemParticles);
-					
-				
+
 			}
-			
+
 		}
 	}
 }

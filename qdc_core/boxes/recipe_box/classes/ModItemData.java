@@ -108,6 +108,8 @@ public class ModItemData {
 
 	public boolean isDirectlyDiscovered() {
 
+		
+		
 		return itemRecipeCollection.isDirectlyDiscovered();
 	}
 
